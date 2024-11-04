@@ -1,12 +1,28 @@
 * {
     box-sizing: border-box;
 }
+
+#elmosodott {
+    background-image: url(kepek/hatter.jpg);
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    position: fixed; /* Fixált pozíció, hogy mindig a háttérben maradjon */
+    top: 0;
+    left: 0;
+    width: 100%; /* Kitölti a teljes szélességet */
+    height: 100%; /* Kitölti a teljes magasságot */
+    z-index: -1; /* Háttérbe helyezi a tartalom mögé */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 #tarolo {
     width:100%;
     max-width: 800px;
     margin: auto;
-    font-family: Arial, Helvetica, sans-serif;
     background-color:beige;
+    border-radius: 10px;
 }
 
 .fejlec {
@@ -17,14 +33,19 @@
     background-size: cover;
     text-align: center;
     color: white;
+    border-radius: 10px;
+    font-family:"Sofia", sans-serif;
+    text-shadow: 3px 3px 3px black;
 }
 
-h1 {
+.fejlec h1 {
     padding-top: 28px;
 }
 
 .menu {
     background-color: rgb(198, 104, 11);
+    font-family:"Sofia", sans-serif;
+    text-shadow: 3px 3px 3px black;
 }
 
 .menu ul {
@@ -59,6 +80,7 @@ h1 {
     color: black;
     text-align: justify;
     padding: 20px;
+    font-family:"Itim", sans-serif;
 }
 
 .tartalom img {
@@ -82,16 +104,16 @@ h1 {
     margin-left: auto;
     margin-right: auto;
     border: 1px solid #ddd;
-    border-radius: 4px;
+    border-radius: 8px;
 }
 
 .kepek img:hover {
     box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
 }
 
-@media screen and (max-width: 473px) {
+@media screen and (max-width: 678px) {
     h1 {
-        padding: 12px;
+        padding: 28px;
     }
     .menu ul {
         display: grid;
@@ -102,6 +124,12 @@ h1 {
     .menu a {
         padding-top: 5px;
         padding-bottom: 5px;
+    }
+    .kepek a {
+        width: 200px;
+        height: 180px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
